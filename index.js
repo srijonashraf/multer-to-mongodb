@@ -72,6 +72,7 @@ app.post("/upload", upload.single("file"), async (req, res, next) => {
     });
     await newFile.save();
 
+    //Delete file from local machine after successfully uploaded into DB.
     fs.unlinkSync(filePath);
 
     res.status(200).json({
