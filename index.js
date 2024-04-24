@@ -9,7 +9,7 @@ const UPLOAD_DESTINATION = "./uploads";
 const dotenv = require("dotenv").config();
 
 //Create folder if its not exist
-fs.mkdirSync(UPLOAD_DESTINATION, { recursive: true });
+// fs.mkdirSync(UPLOAD_DESTINATION, { recursive: true });
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
