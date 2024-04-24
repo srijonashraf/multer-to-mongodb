@@ -108,6 +108,12 @@ app.get("/fetchFile/:id", async (req, res) => {
   }
 });
 
+//Welcome
+
+app.get("/", (req, res) => {
+  res.send("Welcome to Express App!");
+});
+
 //Error handling Middleware
 app.use((err, req, res, next) => {
   if (err) {
