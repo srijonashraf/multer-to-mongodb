@@ -108,19 +108,15 @@ app.get("/fetchFile/:id", async (req, res) => {
   }
 });
 
-  
-
 //Error handling Middleware
 app.use((err, req, res, next) => {
   if (err) {
     if (err instanceof multer.MulterError) {
       console.log(err);
-      res
-        .status(500)
-        .json({
-          status: "fail",
-          message: "There is an upload error check extension and file size.",
-        });
+      res.status(500).json({
+        status: "fail",
+        message: "There is an upload error check extension and file size.",
+      });
     } else {
       res.status(500).json({ status: "fail", message: err });
     }
