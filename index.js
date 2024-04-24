@@ -148,3 +148,7 @@ mongoose
 app.listen(3100, () => {
   console.log("App is running on 3100");
 });
+
+
+
+module.exports = app;
